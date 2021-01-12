@@ -35,9 +35,9 @@ describe('Inbox', () =>{
     });
 
     it('can change the message', async () => {
-        await inbox.methods.setMessage('bye').send({from: accounts[0]});
-        const message = await inbox.methods.message().call();
-        assert.equal(message, 'Hi there!');
+        await inbox.methods.setMessage('bye').send({from: accounts[0]}); //send a transaction to update the message
+        const message = await inbox.methods.message().call(); // get updated value for message
+        assert.equal(message, 'bye'); //check message is updated
     })
 });
 
