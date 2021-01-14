@@ -7,4 +7,4 @@ const source = fs.readFileSync(inboxPath, 'utf8'); //read in contents of file to
 
 solc.compile(source, 1);
 
-module.exports = solc.compile(source, 1).contracts[':Inbox'];
+module.exports = solc.compile(source, 1).contracts[':Inbox']; //feed contents of file directly to compiler
